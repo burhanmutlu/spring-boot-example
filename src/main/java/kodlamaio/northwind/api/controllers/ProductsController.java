@@ -24,7 +24,11 @@ public class ProductsController {
 	private ProductService productService;
 	
 	
-	@Autowired
+	@Autowired // ProductManager p = new ProductManager(); 
+	//bizim yerimize bunu yapıyor 
+	//productservice productmanageri implement ediyor o yüzden
+	//p nesnesini aşağıda yerine yazıyor. interfaceden nesne oluşmaz
+	//ileride değiştirmek için veya test için interface kullanıyoruz
 	public ProductsController(ProductService productService) {
 		super();
 		this.productService = productService;
